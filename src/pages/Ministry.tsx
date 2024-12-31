@@ -105,19 +105,6 @@ const Ministry = () => {
             <Card className="mb-8">
               <CardHeader>
                 <CardTitle className="text-2xl font-playfair text-primary">
-                  Definition
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">
-                  All that God has given us and all we have acquired to accomplish the vision and goal.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="mb-8">
-              <CardHeader>
-                <CardTitle className="text-2xl font-playfair text-primary">
                   Core Components (The 12 Ms)
                 </CardTitle>
               </CardHeader>

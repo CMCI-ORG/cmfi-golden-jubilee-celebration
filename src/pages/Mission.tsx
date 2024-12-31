@@ -105,19 +105,6 @@ const Mission = () => {
             <Card className="mb-8">
               <CardHeader>
                 <CardTitle className="text-2xl font-playfair text-primary">
-                  Definition
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">
-                  The recurrent tasks and responsibilities needed to accomplish the vision.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="mb-8">
-              <CardHeader>
-                <CardTitle className="text-2xl font-playfair text-primary">
                   Core Movements
                 </CardTitle>
               </CardHeader>

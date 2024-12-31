@@ -13,28 +13,18 @@ const Work = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 font-playfair">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 font-playfair">
             Our Work
           </h1>
+          <p className="text-xl text-center text-muted-foreground mb-12">
+            What we must do in individuals, localities, nations, and the world
+          </p>
           
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <Card className="mb-8">
-              <CardHeader>
-                <CardTitle className="text-2xl font-playfair text-primary">
-                  Definition
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">
-                  What we must do in individuals, localities, nations, and the world.
-                </p>
-              </CardContent>
-            </Card>
-
             <Card className="mb-8">
               <CardHeader>
                 <CardTitle className="text-2xl font-playfair text-primary">
