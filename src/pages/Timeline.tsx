@@ -74,6 +74,11 @@ const Timeline = () => {
       events: [
         {
           year: "1986-1994",
+          title: "Divine Deliverance and Direction",
+          description: "God delivered the ministry from denominational mixtures, providing clear direction. This defining period established the ministry's independence, allowing full pursuit of God's specific calling on Brother Zach and the community."
+        },
+        {
+          year: "1986-1994",
           title: "Intensive Discipleship",
           description: "Selected 15 men and 22 women for intentional discipleship. Established weekly home meetings, accountability practices, and fasting disciplines. Distributed over 1 million books to Nigeria and thousands to India."
         },
