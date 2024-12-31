@@ -28,6 +28,48 @@ const Navigation = () => {
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
+        <Link to="/about">
+          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            About
+          </NavigationMenuLink>
+        </Link>
+      </NavigationMenuItem>
+      <NavigationMenuItem>
+        <Link to="/vision">
+          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            Vision
+          </NavigationMenuLink>
+        </Link>
+      </NavigationMenuItem>
+      <NavigationMenuItem>
+        <Link to="/mission">
+          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            Mission
+          </NavigationMenuLink>
+        </Link>
+      </NavigationMenuItem>
+      <NavigationMenuItem>
+        <Link to="/goal">
+          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            Goal
+          </NavigationMenuLink>
+        </Link>
+      </NavigationMenuItem>
+      <NavigationMenuItem>
+        <Link to="/work">
+          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            Work
+          </NavigationMenuLink>
+        </Link>
+      </NavigationMenuItem>
+      <NavigationMenuItem>
+        <Link to="/ministry">
+          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            Ministry
+          </NavigationMenuLink>
+        </Link>
+      </NavigationMenuItem>
+      <NavigationMenuItem>
         <Link to="/timeline">
           <NavigationMenuLink className={navigationMenuTriggerStyle()}>
             Timeline
@@ -42,13 +84,6 @@ const Navigation = () => {
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <Link to="/contact">
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            Contact
-          </NavigationMenuLink>
-        </Link>
-      </NavigationMenuItem>
-      <NavigationMenuItem>
         <Link to="/praise">
           <NavigationMenuLink className={navigationMenuTriggerStyle()}>
             Praise
@@ -56,9 +91,9 @@ const Navigation = () => {
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <Link to="/about">
+        <Link to="/contact">
           <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            About
+            Contact
           </NavigationMenuLink>
         </Link>
       </NavigationMenuItem>
