@@ -108,9 +108,64 @@ const Timeline = () => {
           description: "Focused on training next-generation leaders, establishing Bible schools, and strengthening the foundation of the ministry. Continued writing and teaching until his passing in March 2009."
         },
         {
-          year: "2009",
-          title: "Transition to Glory",
-          description: "On March 14, 2009, Professor Fomum went to be with the Lord, leaving behind a legacy of over 150 books, countless disciples, and a global ministry impacting nations for Christ."
+          year: "March 13, 2009",
+          title: "Victory Declaration",
+          description: "A historic proclamation from Bamenda marked the dismantling of spiritual obstacles, clearing the path for ministry goals. This event signified a major turning point in the ministry's journey."
+        }
+      ]
+    },
+    {
+      era: "New Leadership and Expansion (2009-2019)",
+      events: [
+        {
+          year: "2009-2012",
+          title: "Leadership Transition",
+          description: "Brother Theodore assumed leadership after Brother Zach, receiving widespread acceptance and support from leaders and co-workers across the ministry."
+        },
+        {
+          year: "2010",
+          title: "Headquarters Dedication",
+          description: "Dedication of the ministry headquarters in Koumé, followed by PROCCL 2012 which included the dedication of the Libreville worship and administrative facilities."
+        },
+        {
+          year: "2012",
+          title: "International Missionary Concertation",
+          description: "Delegates from 45 nations gathered in Libreville for a two-week missionary conference, sharing testimonies and ministry reports."
+        },
+        {
+          year: "2019",
+          title: "Unprecedented Growth",
+          description: "Witnessed remarkable growth from 110,000 to around 6 million members. Notable expansion in the Garoua Spiritual Nation, growing from 1,300 to over one million members."
+        }
+      ]
+    },
+    {
+      era: "Global Expansion and Revival (2020-Present)",
+      events: [
+        {
+          year: "2020",
+          title: "Phase 3 Launch",
+          description: "Launched phase 3 with 3.1 million believers across 113 nations, meeting in 13,000 localities and 23,000 house churches."
+        },
+        {
+          year: "2024",
+          title: "Olympic Outreach",
+          description: "Distributed one million copies of 'The Game of Life' across 400 French cities during the Olympic games. Ministry now present in 150 nations with 331 international and 1,300 national missionaries."
+        },
+        {
+          year: "2024",
+          title: "Abidjan Summit",
+          description: "Strategic leadership summit in Abidjan setting future direction. Established prayer and fasting initiatives across the ministry."
+        },
+        {
+          year: "2024-2029",
+          title: "Five-Year Vision",
+          description: "Set goal to reach 50-100 million believers in one million House Churches across 200 nations, with one million active discipleship leaders."
+        },
+        {
+          year: "2065",
+          title: "Long-term Vision",
+          description: "Working towards the goal of 1 billion disciples meeting in 25 million house churches across 250 nations."
         }
       ]
     }
