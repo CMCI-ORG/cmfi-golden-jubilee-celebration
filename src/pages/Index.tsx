@@ -199,6 +199,15 @@ const Index = () => {
               delay={0.4}
             />
           </div>
+          <div className="text-center mt-12">
+            <Link 
+              to="/testimonials" 
+              className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary/90 transition-all hover:gap-4 group"
+            >
+              Read More Testimonials
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
         </div>
       </section>
     </div>
