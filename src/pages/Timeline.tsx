@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import PageBanner from "@/components/PageBanner";
+import TimelinePeriod from "@/components/TimelinePeriod";
 
 const Timeline = () => {
   const timelineData = [
@@ -133,6 +133,11 @@ const Timeline = () => {
           description: "Delegates from 45 nations gathered in Libreville for a two-week missionary conference, sharing testimonies and ministry reports."
         },
         {
+          year: "December 2019",
+          title: "CMFI 3rd World Convention",
+          description: "A historic gathering of about 30,000 participants from 97 nations across 6 continents for 15 days in Koumé-Bertoua. This convention marked the completion of phase two and set the stage for phase 3 of the ministry's vision."
+        },
+        {
           year: "2019",
           title: "Unprecedented Growth",
           description: "Witnessed remarkable growth from 110,000 to around 6 million members. Notable expansion in the Garoua Spiritual Nation, growing from 1,300 to over one million members."
@@ -187,32 +192,12 @@ const Timeline = () => {
           
           <div className="space-y-12">
             {timelineData.map((period, index) => (
-              <motion.div
+              <TimelinePeriod
                 key={period.era}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <Card className="relative overflow-hidden">
-                  <div className="absolute top-0 left-0 w-2 h-full bg-primary" />
-                  <CardHeader>
-                    <CardTitle className="text-2xl md:text-3xl font-playfair">
-                      {period.era}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
-                    {period.events.map((event) => (
-                      <div key={event.year} className="relative pl-8 border-l-2 border-primary/20">
-                        <div className="absolute left-0 top-0 -translate-x-[9px] w-4 h-4 rounded-full bg-primary" />
-                        <h3 className="text-xl font-bold mb-2">
-                          {event.year}: {event.title}
-                        </h3>
-                        <p className="text-gray-600">{event.description}</p>
-                      </div>
-                    ))}
-                  </CardContent>
-                </Card>
-              </motion.div>
+                era={period.era}
+                events={period.events}
+                index={index}
+              />
             ))}
           </div>
         </motion.div>
