@@ -54,6 +54,24 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Full Length Banner Section */}
+      <section className="w-full py-12 md:py-20">
+        <div className="w-full">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="relative w-full"
+          >
+            <img
+              src="/lovable-uploads/d4136a8e-34fc-4112-ab92-a827833262e6.png"
+              alt="CMFI Golden Jubilee Banner"
+              className="w-full h-auto object-cover"
+            />
+          </motion.div>
+        </div>
+      </section>
+
       {/* Timeline Preview */}
       <section className="py-12 md:py-20 bg-white">
         <div className="w-full px-4 md:container mx-auto">
