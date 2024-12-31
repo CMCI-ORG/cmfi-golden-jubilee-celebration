@@ -1,21 +1,83 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import PageBanner from "@/components/PageBanner";
+import {
+  Users,
+  Plane,
+  UserCog,
+  Boxes,
+  Sparkles,
+  MessageSquare,
+  BookOpen,
+  Radio,
+  Workflow,
+  Target,
+  ArrowUpCircle,
+  Plus
+} from "lucide-react";
 
 const Ministry = () => {
   const ministryComponents = [
-    { title: "Models", description: "Exemplary lives that inspire and guide others in the faith" },
-    { title: "Missionaries", description: "Sent ones who pioneer and sustain the work of the Gospel" },
-    { title: "Men", description: "Leaders and workers committed to fulfilling God's purposes" },
-    { title: "Ministries", description: "Specialized gifts for targeted aspects of the work" },
-    { title: "Miracles", description: "Manifestations of God's power that authenticate the message" },
-    { title: "Message", description: "The Gospel and teaching unique to our calling" },
-    { title: "Materials", description: "Tools like books, tracts, and digital media for spreading the Word" },
-    { title: "Means", description: "Resources like radio, internet, and technology for outreach" },
-    { title: "Methods", description: "Practices like prayer, fasting, and church planting" },
-    { title: "Missions", description: "Focused undertakings that advance the ministry" },
-    { title: "Movements", description: "Systematic efforts like intercession, church growth, and literature distribution" },
-    { title: "More", description: "Future provisions from God to fulfill His purposes" }
+    { 
+      title: "Models", 
+      description: "Exemplary lives that inspire and guide others in the faith",
+      icon: Users
+    },
+    { 
+      title: "Missionaries", 
+      description: "Sent ones who pioneer and sustain the work of the Gospel",
+      icon: Plane
+    },
+    { 
+      title: "Men", 
+      description: "Leaders and workers committed to fulfilling God's purposes",
+      icon: UserCog
+    },
+    { 
+      title: "Ministries", 
+      description: "Specialized gifts for targeted aspects of the work",
+      icon: Boxes
+    },
+    { 
+      title: "Miracles", 
+      description: "Manifestations of God's power that authenticate the message",
+      icon: Sparkles
+    },
+    { 
+      title: "Message", 
+      description: "The Gospel and teaching unique to our calling",
+      icon: MessageSquare
+    },
+    { 
+      title: "Materials", 
+      description: "Tools like books, tracts, and digital media for spreading the Word",
+      icon: BookOpen
+    },
+    { 
+      title: "Means", 
+      description: "Resources like radio, internet, and technology for outreach",
+      icon: Radio
+    },
+    { 
+      title: "Methods", 
+      description: "Practices like prayer, fasting, and church planting",
+      icon: Workflow
+    },
+    { 
+      title: "Missions", 
+      description: "Focused undertakings that advance the ministry",
+      icon: Target
+    },
+    { 
+      title: "Movements", 
+      description: "Systematic efforts like intercession, church growth, and literature distribution",
+      icon: ArrowUpCircle
+    },
+    { 
+      title: "More", 
+      description: "Future provisions from God to fulfill His purposes",
+      icon: Plus
+    }
   ];
 
   return (
@@ -64,12 +126,15 @@ const Ministry = () => {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.1 }}
-                      className="bg-white p-4 rounded-lg shadow-sm border hover:shadow-md transition-shadow"
+                      className="bg-white p-6 rounded-lg shadow-sm border hover:shadow-md transition-shadow"
                     >
-                      <h3 className="text-lg font-semibold mb-2 text-primary">
-                        {component.title}
-                      </h3>
-                      <p className="text-sm text-gray-600">{component.description}</p>
+                      <div className="flex flex-col items-center text-center">
+                        <component.icon className="w-12 h-12 mb-4 text-primary" strokeWidth={1.5} />
+                        <h3 className="text-lg font-semibold mb-2 text-primary">
+                          {component.title}
+                        </h3>
+                        <p className="text-sm text-gray-600">{component.description}</p>
+                      </div>
                     </motion.div>
                   ))}
                 </div>
