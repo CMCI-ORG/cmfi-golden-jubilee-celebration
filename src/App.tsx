@@ -11,6 +11,7 @@ import Ministry from "./pages/Ministry";
 import Work from "./pages/Work";
 import Mission from "./pages/Mission";
 import Praise from "./pages/Praise";
+import About from "./pages/About";
 import Navigation from "./components/Navigation";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/work" element={<Work />} />
           <Route path="/mission" element={<Mission />} />
           <Route path="/praise" element={<Praise />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
