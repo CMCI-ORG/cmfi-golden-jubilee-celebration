@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import PageBanner from "@/components/PageBanner";
+import {
+  Megaphone,
+  Users,
+  Home,
+  Sparkles
+} from "lucide-react";
 
 const Goal = () => {
   return (
@@ -63,26 +69,30 @@ const Goal = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="p-4 border rounded-lg">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="p-6 border rounded-lg flex flex-col items-center text-center">
+                    <Megaphone className="w-12 h-12 mb-4 text-primary" strokeWidth={1.5} />
                     <h4 className="font-semibold mb-2">Proclamation of the Gospel</h4>
                     <p className="text-sm text-gray-600">
                       Touch every person alive with the Gospel in its fullness
                     </p>
                   </div>
-                  <div className="p-4 border rounded-lg">
+                  <div className="p-6 border rounded-lg flex flex-col items-center text-center">
+                    <Users className="w-12 h-12 mb-4 text-primary" strokeWidth={1.5} />
                     <h4 className="font-semibold mb-2">Discipleship</h4>
                     <p className="text-sm text-gray-600">
                       Produce converts who obey Jesus in all aspects of life
                     </p>
                   </div>
-                  <div className="p-4 border rounded-lg">
+                  <div className="p-6 border rounded-lg flex flex-col items-center text-center">
+                    <Home className="w-12 h-12 mb-4 text-primary" strokeWidth={1.5} />
                     <h4 className="font-semibold mb-2">Structure</h4>
                     <p className="text-sm text-gray-600">
                       Organize into house churches suitable for personal spiritual growth and accountability
                     </p>
                   </div>
-                  <div className="p-4 border rounded-lg">
+                  <div className="p-6 border rounded-lg flex flex-col items-center text-center">
+                    <Sparkles className="w-12 h-12 mb-4 text-primary" strokeWidth={1.5} />
                     <h4 className="font-semibold mb-2">Overflow</h4>
                     <p className="text-sm text-gray-600">
                       Spur revival and global spiritual awakening
