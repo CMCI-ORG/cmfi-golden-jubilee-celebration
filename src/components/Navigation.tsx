@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Menu } from "lucide-react";
+import { Menu, Home, Info, Clock, MessageSquare, Music, Mail, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -43,23 +43,25 @@ const Navigation = () => {
   ];
 
   const MenuItems = ({ isMobile = false }) => (
-    <NavigationMenuList className={isMobile ? "flex flex-col space-y-2" : ""}>
-      <NavigationMenuItem>
+    <NavigationMenuList className={isMobile ? "flex flex-col space-y-2 items-start w-full" : ""}>
+      <NavigationMenuItem className={isMobile ? "w-full" : ""}>
         <Link to="/">
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <NavigationMenuLink className={`${navigationMenuTriggerStyle()} ${isMobile ? "w-full justify-start" : ""}`}>
+            <Home className="w-4 h-4 mr-2" />
             Home
           </NavigationMenuLink>
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem className={isMobile ? "w-full" : ""}>
         <NavigationMenuTrigger className={isMobile ? "w-full justify-start" : ""}>
+          <Info className="w-4 h-4 mr-2" />
           About
         </NavigationMenuTrigger>
         <NavigationMenuContent>
-          <div className={`grid gap-3 p-6 ${isMobile ? "w-[90vw]" : "w-[400px]"}`}>
+          <div className={`grid gap-1 p-4 ${isMobile ? "w-[90vw]" : "w-[200px]"}`}>
             <Link
               to="/about"
-              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+              className="flex items-center space-x-2 select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
             >
               <div className="text-sm font-medium leading-none">About Us</div>
             </Link>
@@ -67,7 +69,7 @@ const Navigation = () => {
               <Link
                 key={item.title}
                 to={item.path}
-                className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                className="flex items-center space-x-2 select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
               >
                 <div className="text-sm font-medium leading-none">{item.title}</div>
               </Link>
@@ -75,30 +77,34 @@ const Navigation = () => {
           </div>
         </NavigationMenuContent>
       </NavigationMenuItem>
-      <NavigationMenuItem>
+      <NavigationMenuItem className={isMobile ? "w-full" : ""}>
         <Link to="/timeline">
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <NavigationMenuLink className={`${navigationMenuTriggerStyle()} ${isMobile ? "w-full justify-start" : ""}`}>
+            <Clock className="w-4 h-4 mr-2" />
             Timeline
           </NavigationMenuLink>
         </Link>
       </NavigationMenuItem>
-      <NavigationMenuItem>
+      <NavigationMenuItem className={isMobile ? "w-full" : ""}>
         <Link to="/testimonials">
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <NavigationMenuLink className={`${navigationMenuTriggerStyle()} ${isMobile ? "w-full justify-start" : ""}`}>
+            <MessageSquare className="w-4 h-4 mr-2" />
             Testimonials
           </NavigationMenuLink>
         </Link>
       </NavigationMenuItem>
-      <NavigationMenuItem>
+      <NavigationMenuItem className={isMobile ? "w-full" : ""}>
         <Link to="/praise">
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <NavigationMenuLink className={`${navigationMenuTriggerStyle()} ${isMobile ? "w-full justify-start" : ""}`}>
+            <Music className="w-4 h-4 mr-2" />
             Praise
           </NavigationMenuLink>
         </Link>
       </NavigationMenuItem>
-      <NavigationMenuItem>
+      <NavigationMenuItem className={isMobile ? "w-full" : ""}>
         <Link to="/contact">
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <NavigationMenuLink className={`${navigationMenuTriggerStyle()} ${isMobile ? "w-full justify-start" : ""}`}>
+            <Mail className="w-4 h-4 mr-2" />
             Contact
           </NavigationMenuLink>
         </Link>
@@ -133,7 +139,7 @@ const Navigation = () => {
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[80vw] sm:w-[350px] pt-10">
+              <SheetContent side="left" className="w-[80vw] sm:w-[350px] pt-10">
                 <NavigationMenu className="block w-full">
                   <MenuItems isMobile={true} />
                 </NavigationMenu>
