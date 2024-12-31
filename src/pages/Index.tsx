@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import CountdownTimer from "@/components/CountdownTimer";
 import StatCard from "@/components/StatCard";
 import TestimonialCard from "@/components/TestimonialCard";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -35,6 +36,45 @@ const Index = () => {
             className="w-full px-2"
           >
             <CountdownTimer />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Jubilee Introduction Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="w-full px-4 md:container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 font-playfair">
+              CELEBRATION OF CMFI GOLDEN JUBILEE
+            </h2>
+            <div className="prose prose-lg mx-auto text-left space-y-6">
+              <p className="italic text-xl text-center">
+                Precious and beloved co-workers in the Lord,
+              </p>
+              <p className="text-center font-semibold">
+                Praise the Lord! Let's celebrate the Lord.
+              </p>
+              <blockquote className="border-l-4 border-primary pl-4 italic">
+                "Come, let us bow down in worship, let us kneel before the Lord our Maker; for he is our God and we are the people of his pasture, the flock under his care" (Psalm 95:6-7).
+              </blockquote>
+              <p>
+                The year 2025 marks a capstone (crowning achievement) of our ministry thus far: it is the 50th anniversary of our ministry. Praise the Lord! Praise the Lord!! Praise the Lord!!!
+              </p>
+              <p className="text-gray-700">
+                Yes, it's soon 50 years since the arrival of Brother Zach in Cameroon on 11 May 1975, soon 50 years since the beginning of our ministry on 12 May 1975 through that historic prayer night and the writing of the evangelistic tract, "How to know the Lord Jesus".
+              </p>
+              <Link 
+                to="/about" 
+                className="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary/90 transition-colors mt-8 mx-auto text-center"
+              >
+                Read More About Our Journey
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
