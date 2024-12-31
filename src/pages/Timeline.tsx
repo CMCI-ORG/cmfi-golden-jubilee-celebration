@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import PageBanner from "@/components/PageBanner";
 
 const Timeline = () => {
   const timelineData = [
@@ -121,48 +122,51 @@ const Timeline = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 py-12 px-4">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        className="container mx-auto max-w-4xl"
-      >
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 font-playfair">
-          ZTF Timeline
-        </h1>
-        
-        <div className="space-y-12">
-          {timelineData.map((period, index) => (
-            <motion.div
-              key={period.era}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Card className="relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-2 h-full bg-primary" />
-                <CardHeader>
-                  <CardTitle className="text-2xl md:text-3xl font-playfair">
-                    {period.era}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  {period.events.map((event) => (
-                    <div key={event.year} className="relative pl-8 border-l-2 border-primary/20">
-                      <div className="absolute left-0 top-0 -translate-x-[9px] w-4 h-4 rounded-full bg-primary" />
-                      <h3 className="text-xl font-bold mb-2">
-                        {event.year}: {event.title}
-                      </h3>
-                      <p className="text-gray-600">{event.description}</p>
-                    </div>
-                  ))}
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+      <PageBanner />
+      <div className="py-12 px-4">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="container mx-auto max-w-4xl"
+        >
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 font-playfair">
+            ZTF Timeline
+          </h1>
+          
+          <div className="space-y-12">
+            {timelineData.map((period, index) => (
+              <motion.div
+                key={period.era}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-2 h-full bg-primary" />
+                  <CardHeader>
+                    <CardTitle className="text-2xl md:text-3xl font-playfair">
+                      {period.era}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    {period.events.map((event) => (
+                      <div key={event.year} className="relative pl-8 border-l-2 border-primary/20">
+                        <div className="absolute left-0 top-0 -translate-x-[9px] w-4 h-4 rounded-full bg-primary" />
+                        <h3 className="text-xl font-bold mb-2">
+                          {event.year}: {event.title}
+                        </h3>
+                        <p className="text-gray-600">{event.description}</p>
+                      </div>
+                    ))}
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 };
