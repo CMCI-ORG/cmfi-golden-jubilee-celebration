@@ -10,7 +10,7 @@ const PageBanner = () => {
         className="relative w-full"
       >
         <img
-          src="/lovable-uploads/d4136a8e-34fc-4112-ab92-a827833262e6.png"
+          src="/lovable-uploads/f8eceeae-8da7-40ab-a857-660c9ee2afc0.png"
           alt="CMFI Golden Jubilee Banner"
           className="w-full h-auto object-cover"
         />
