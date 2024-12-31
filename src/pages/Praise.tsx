@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import PageBanner from "@/components/PageBanner";
+import { cn } from "@/lib/utils";
 
 const PraiseContent = [
   {
@@ -66,25 +67,25 @@ const PraiseContent = [
 
 const Praise = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-b from-background to-accent/20">
       <PageBanner />
       
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="container mx-auto py-12 px-4"
+        className="container mx-auto py-16 px-4"
       >
         <motion.h1 
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="text-4xl md:text-5xl font-playfair font-bold text-center mb-12"
+          className="text-5xl md:text-6xl font-playfair font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70"
         >
-          Let us praise and thank the Lord as follows
+          Let us praise and thank the Lord
         </motion.h1>
 
-        <div className="space-y-24">
+        <div className="space-y-32">
           {PraiseContent.map((item, index) => (
             <motion.div
               key={item.id}
@@ -92,48 +93,63 @@ const Praise = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
-              className={`flex flex-col ${
+              className={cn(
+                "flex flex-col gap-12 items-center relative",
                 index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-              } gap-8 items-center relative`}
+              )}
             >
-              <div className="absolute -left-4 md:-left-8 top-0 w-12 h-12 flex items-center justify-center">
-                <span className="text-4xl font-playfair font-bold text-primary opacity-50">
+              {/* Number indicator */}
+              <div className="absolute -left-4 md:-left-8 top-0 w-16 h-16 flex items-center justify-center">
+                <span className="text-6xl font-playfair font-bold bg-clip-text text-transparent bg-gradient-to-br from-primary to-primary/40">
                   {String(item.id).padStart(2, '0')}
                 </span>
               </div>
               
-              <div className="flex-1 space-y-4">
+              <div className="flex-1 space-y-6 relative">
+                <motion.div 
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="absolute -left-2 top-0 w-1 h-full bg-gradient-to-b from-primary/80 to-primary/20"
+                />
+                
                 <motion.h2 
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                   viewport={{ once: true }}
-                  className="text-2xl md:text-3xl font-playfair font-bold text-foreground mb-4"
+                  className="text-3xl md:text-4xl font-playfair font-bold text-foreground mb-6 pl-6"
                 >
                   {item.title}
                 </motion.h2>
+                
                 <motion.div 
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
-                  className="text-lg leading-relaxed text-foreground"
+                  className="text-lg leading-relaxed text-foreground/90 pl-6 backdrop-blur-sm"
                 >
                   {item.content}
                 </motion.div>
               </div>
+
               <motion.div 
-                className="flex-1"
+                className="flex-1 group"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                <img
-                  src={item.image}
-                  alt={`Illustration for ${item.title}`}
-                  className="rounded-lg shadow-xl w-full h-[400px] object-cover hover:scale-105 transition-transform duration-300"
-                />
+                <div className="relative overflow-hidden rounded-2xl shadow-xl">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent group-hover:opacity-0 transition-opacity duration-300" />
+                  <img
+                    src={item.image}
+                    alt={`Illustration for ${item.title}`}
+                    className="w-full h-[500px] object-cover transform transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
               </motion.div>
             </motion.div>
           ))}
