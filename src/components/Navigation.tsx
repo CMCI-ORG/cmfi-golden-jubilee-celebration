@@ -46,6 +46,13 @@ const Navigation = () => {
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link to="/about">
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    About
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
         </div>
