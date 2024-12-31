@@ -12,7 +12,10 @@ import Work from "./pages/Work";
 import Mission from "./pages/Mission";
 import Praise from "./pages/Praise";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Testimonials from "./pages/Testimonials";
 import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
 const queryClient = new QueryClient();
 
@@ -22,18 +25,25 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/timeline" element={<Timeline />} />
-          <Route path="/vision" element={<Vision />} />
-          <Route path="/goal" element={<Goal />} />
-          <Route path="/ministry" element={<Ministry />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/mission" element={<Mission />} />
-          <Route path="/praise" element={<Praise />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
+        <div className="flex min-h-screen flex-col">
+          <Navigation />
+          <main className="flex-1">
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/timeline" element={<Timeline />} />
+              <Route path="/vision" element={<Vision />} />
+              <Route path="/goal" element={<Goal />} />
+              <Route path="/ministry" element={<Ministry />} />
+              <Route path="/work" element={<Work />} />
+              <Route path="/mission" element={<Mission />} />
+              <Route path="/praise" element={<Praise />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/testimonials" element={<Testimonials />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
