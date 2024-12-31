@@ -6,18 +6,46 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  navigationMenuTriggerStyle,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
 } from "@/components/ui/navigation-menu";
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import CMFIMenu from "./CMFIMenu";
 
 const Navigation = () => {
   const location = useLocation();
   
+  const aboutMenuItems = [
+    {
+      title: "Vision",
+      path: "/vision",
+      description: "The totality of what God has revealed to us as His will"
+    },
+    {
+      title: "Goal",
+      path: "/goal",
+      description: "A measurable concretization of the vision"
+    },
+    {
+      title: "Ministry",
+      path: "/ministry",
+      description: "All that God has given us to accomplish the vision"
+    },
+    {
+      title: "Work",
+      path: "/work",
+      description: "What we must do in individuals, localities, and nations"
+    },
+    {
+      title: "Mission",
+      path: "/mission",
+      description: "The recurrent tasks needed to accomplish the vision"
+    }
+  ];
+
   const MenuItems = () => (
     <NavigationMenuList>
       <NavigationMenuItem>
@@ -28,46 +56,32 @@ const Navigation = () => {
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <Link to="/about">
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            About
-          </NavigationMenuLink>
-        </Link>
-      </NavigationMenuItem>
-      <NavigationMenuItem>
-        <Link to="/vision">
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            Vision
-          </NavigationMenuLink>
-        </Link>
-      </NavigationMenuItem>
-      <NavigationMenuItem>
-        <Link to="/mission">
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            Mission
-          </NavigationMenuLink>
-        </Link>
-      </NavigationMenuItem>
-      <NavigationMenuItem>
-        <Link to="/goal">
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            Goal
-          </NavigationMenuLink>
-        </Link>
-      </NavigationMenuItem>
-      <NavigationMenuItem>
-        <Link to="/work">
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            Work
-          </NavigationMenuLink>
-        </Link>
-      </NavigationMenuItem>
-      <NavigationMenuItem>
-        <Link to="/ministry">
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            Ministry
-          </NavigationMenuLink>
-        </Link>
+        <NavigationMenuTrigger>About</NavigationMenuTrigger>
+        <NavigationMenuContent>
+          <div className="grid gap-3 p-6 w-[400px]">
+            <Link
+              to="/about"
+              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+            >
+              <div className="text-sm font-medium leading-none">About Us</div>
+              <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                Learn more about our organization
+              </p>
+            </Link>
+            {aboutMenuItems.map((item) => (
+              <Link
+                key={item.title}
+                to={item.path}
+                className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+              >
+                <div className="text-sm font-medium leading-none">{item.title}</div>
+                <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                  {item.description}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </NavigationMenuContent>
       </NavigationMenuItem>
       <NavigationMenuItem>
         <Link to="/timeline">
@@ -111,7 +125,6 @@ const Navigation = () => {
           />
         </Link>
         <div className="flex items-center space-x-4">
-          <CMFIMenu />
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <NavigationMenu>
