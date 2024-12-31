@@ -12,7 +12,14 @@ const Navigation = () => {
   
   return (
     <div className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center">
+      <div className="container flex h-14 items-center justify-between">
+        <Link to="/" className="flex items-center">
+          <img 
+            src="/lovable-uploads/45a7fd89-8c1d-4899-b50a-ddf08fa910fb.png" 
+            alt="CMFI Golden Jubilee Logo" 
+            className="h-10 w-auto"
+          />
+        </Link>
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
