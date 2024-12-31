@@ -47,8 +47,8 @@ const Navigation = () => {
     }
   ];
 
-  const MenuItems = () => (
-    <NavigationMenuList>
+  const MenuItems = ({ isMobile = false }) => (
+    <NavigationMenuList className={isMobile ? "flex flex-col space-y-2" : ""}>
       <NavigationMenuItem>
         <Link to="/">
           <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -56,10 +56,12 @@ const Navigation = () => {
           </NavigationMenuLink>
         </Link>
       </NavigationMenuItem>
-      <NavigationMenuItem>
-        <NavigationMenuTrigger>About</NavigationMenuTrigger>
+      <NavigationMenuItem className={isMobile ? "w-full" : ""}>
+        <NavigationMenuTrigger className={isMobile ? "w-full justify-start" : ""}>
+          About
+        </NavigationMenuTrigger>
         <NavigationMenuContent>
-          <div className="grid gap-3 p-6 w-[400px]">
+          <div className={`grid gap-3 p-6 ${isMobile ? "w-[90vw]" : "w-[400px]"}`}>
             <Link
               to="/about"
               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
@@ -142,9 +144,9 @@ const Navigation = () => {
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[80vw] sm:w-[350px]">
-                <NavigationMenu className="block">
-                  <MenuItems />
+              <SheetContent side="right" className="w-[80vw] sm:w-[350px] pt-10">
+                <NavigationMenu className="block w-full">
+                  <MenuItems isMobile={true} />
                 </NavigationMenu>
               </SheetContent>
             </Sheet>
