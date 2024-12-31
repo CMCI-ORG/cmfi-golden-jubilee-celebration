@@ -15,8 +15,12 @@ const TestimonialCard = ({ quote, author, location, delay = 0 }: TestimonialCard
       transition={{ duration: 0.5, delay }}
       viewport={{ once: true }}
       className="testimonial-card"
+      role="listitem"
+      aria-label={`Testimonial from ${author}`}
     >
-      <p className="text-lg md:text-xl mb-6 italic text-gray-700">{quote}</p>
+      <p className="text-lg md:text-xl mb-6 italic text-gray-700" role="text">
+        {quote}
+      </p>
       <div>
         <p className="font-semibold text-gray-900">{author}</p>
         <p className="text-gray-500">{location}</p>
