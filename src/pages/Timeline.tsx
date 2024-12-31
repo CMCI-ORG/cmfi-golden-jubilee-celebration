@@ -140,7 +140,7 @@ const Timeline = () => {
         {
           year: "2019",
           title: "Unprecedented Growth",
-          description: "Witnessed remarkable growth from 110,000 to around 6 million members. Notable expansion in the Garoua Spiritual Nation, growing from 1,300 to over one million members."
+          description: "Witnessed remarkable growth in Cameroon and other nations, with total membership increasing from 110,000 to around 6 million members. The Garoua Spiritual Nation grew from 1,300 members in 2009 to over one million members. Additionally, a Spiritual Province in the Muslim-dominated Far-North Region of Cameroon (Mayo Kani and Danay) crossed one million members."
         }
       ]
     },
