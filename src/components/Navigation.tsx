@@ -14,6 +14,7 @@ import {
   Sheet,
   SheetContent,
   SheetTrigger,
+  SheetClose,
 } from "@/components/ui/sheet";
 
 const Navigation = () => {
@@ -50,12 +51,23 @@ const Navigation = () => {
   const MenuItems = ({ isMobile = false }) => (
     <NavigationMenuList className={isMobile ? "flex flex-col space-y-2 items-start w-full" : ""}>
       <NavigationMenuItem className={isMobile ? "w-full" : ""}>
-        <Link to="/">
-          <NavigationMenuLink className={`${navigationMenuTriggerStyle()} ${isMobile ? "w-full justify-start" : ""}`}>
-            <Home className="w-4 h-4 mr-2" />
-            Home
-          </NavigationMenuLink>
-        </Link>
+        {isMobile ? (
+          <SheetClose asChild>
+            <Link to="/">
+              <NavigationMenuLink className={`${navigationMenuTriggerStyle()} ${isMobile ? "w-full justify-start" : ""}`}>
+                <Home className="w-4 h-4 mr-2" />
+                Home
+              </NavigationMenuLink>
+            </Link>
+          </SheetClose>
+        ) : (
+          <Link to="/">
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <Home className="w-4 h-4 mr-2" />
+              Home
+            </NavigationMenuLink>
+          </Link>
+        )}
       </NavigationMenuItem>
       <NavigationMenuItem className={isMobile ? "w-full" : ""}>
         <NavigationMenuTrigger className={isMobile ? "w-full justify-start" : ""}>
@@ -64,58 +76,77 @@ const Navigation = () => {
         </NavigationMenuTrigger>
         <NavigationMenuContent>
           <div className={`grid gap-1 p-4 ${isMobile ? "w-[90vw]" : "w-[200px]"}`}>
-            <Link
-              to="/about"
-              className="flex items-center space-x-2 select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-            >
-              <Info className="w-4 h-4" />
-              <div className="text-sm font-medium leading-none">About Us</div>
-            </Link>
-            {aboutMenuItems.map((item) => (
+            {isMobile ? (
+              <SheetClose asChild>
+                <Link
+                  to="/about"
+                  className="flex items-center space-x-2 select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                >
+                  <Info className="w-4 h-4" />
+                  <div className="text-sm font-medium leading-none">About Us</div>
+                </Link>
+              </SheetClose>
+            ) : (
               <Link
-                key={item.title}
-                to={item.path}
+                to="/about"
                 className="flex items-center space-x-2 select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
               >
-                {item.icon}
-                <div className="text-sm font-medium leading-none">{item.title}</div>
+                <Info className="w-4 h-4" />
+                <div className="text-sm font-medium leading-none">About Us</div>
               </Link>
+            )}
+            {aboutMenuItems.map((item) => (
+              isMobile ? (
+                <SheetClose key={item.title} asChild>
+                  <Link
+                    to={item.path}
+                    className="flex items-center space-x-2 select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                  >
+                    {item.icon}
+                    <div className="text-sm font-medium leading-none">{item.title}</div>
+                  </Link>
+                </SheetClose>
+              ) : (
+                <Link
+                  key={item.title}
+                  to={item.path}
+                  className="flex items-center space-x-2 select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                >
+                  {item.icon}
+                  <div className="text-sm font-medium leading-none">{item.title}</div>
+                </Link>
+              )
             ))}
           </div>
         </NavigationMenuContent>
       </NavigationMenuItem>
-      <NavigationMenuItem className={isMobile ? "w-full" : ""}>
-        <Link to="/timeline">
-          <NavigationMenuLink className={`${navigationMenuTriggerStyle()} ${isMobile ? "w-full justify-start" : ""}`}>
-            <Clock className="w-4 h-4 mr-2" />
-            Timeline
-          </NavigationMenuLink>
-        </Link>
-      </NavigationMenuItem>
-      <NavigationMenuItem className={isMobile ? "w-full" : ""}>
-        <Link to="/testimonials">
-          <NavigationMenuLink className={`${navigationMenuTriggerStyle()} ${isMobile ? "w-full justify-start" : ""}`}>
-            <MessageSquare className="w-4 h-4 mr-2" />
-            Testimonials
-          </NavigationMenuLink>
-        </Link>
-      </NavigationMenuItem>
-      <NavigationMenuItem className={isMobile ? "w-full" : ""}>
-        <Link to="/praise">
-          <NavigationMenuLink className={`${navigationMenuTriggerStyle()} ${isMobile ? "w-full justify-start" : ""}`}>
-            <Music className="w-4 h-4 mr-2" />
-            Praise
-          </NavigationMenuLink>
-        </Link>
-      </NavigationMenuItem>
-      <NavigationMenuItem className={isMobile ? "w-full" : ""}>
-        <Link to="/contact">
-          <NavigationMenuLink className={`${navigationMenuTriggerStyle()} ${isMobile ? "w-full justify-start" : ""}`}>
-            <Mail className="w-4 h-4 mr-2" />
-            Contact
-          </NavigationMenuLink>
-        </Link>
-      </NavigationMenuItem>
+      {["timeline", "testimonials", "praise", "contact"].map((item) => (
+        <NavigationMenuItem key={item} className={isMobile ? "w-full" : ""}>
+          {isMobile ? (
+            <SheetClose asChild>
+              <Link to={`/${item}`}>
+                <NavigationMenuLink className={`${navigationMenuTriggerStyle()} ${isMobile ? "w-full justify-start" : ""}`}>
+                  {item === "timeline" && <Clock className="w-4 h-4 mr-2" />}
+                  {item === "testimonials" && <MessageSquare className="w-4 h-4 mr-2" />}
+                  {item === "praise" && <Music className="w-4 h-4 mr-2" />}
+                  {item === "contact" && <Mail className="w-4 h-4 mr-2" />}
+                  {item.charAt(0).toUpperCase() + item.slice(1)}
+                </NavigationMenuLink>
+              </Link>
+            </SheetClose>
+          ) : (
+            <Link to={`/${item}`}>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                {item === "timeline" && <Clock className="w-4 h-4 mr-2" />}
+                {item === "testimonials" && <MessageSquare className="w-4 h-4 mr-2" />}
+                {item === "praise" && <Music className="w-4 h-4 mr-2" />}
+                {item === "contact" && <Mail className="w-4 h-4 mr-2" />}
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </NavigationMenuLink>
+            </Link>
+          )}
+        </NavigationMenuItem>
+      ))}
     </NavigationMenuList>
   );
 
