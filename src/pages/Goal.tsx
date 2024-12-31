@@ -19,28 +19,18 @@ const Goal = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 font-playfair">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 font-playfair">
             Our Goal
           </h1>
+          <p className="text-xl text-center text-muted-foreground mb-12">
+            The measurable concretization of a vision, pursued without distraction
+          </p>
           
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <Card className="mb-8">
-              <CardHeader>
-                <CardTitle className="text-2xl font-playfair text-primary">
-                  Definition
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">
-                  A goal is the measurable concretization of a vision, pursued without distraction.
-                </p>
-              </CardContent>
-            </Card>
-
             <Card className="mb-8">
               <CardHeader>
                 <CardTitle className="text-2xl font-playfair text-primary">

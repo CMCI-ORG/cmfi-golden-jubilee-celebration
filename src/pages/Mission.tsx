@@ -90,9 +90,12 @@ const Mission = () => {
           transition={{ duration: 0.8 }}
           className="max-w-6xl mx-auto"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 font-playfair">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 font-playfair">
             Our Mission
           </h1>
+          <p className="text-xl text-center text-muted-foreground mb-12">
+            The recurrent tasks and responsibilities needed to accomplish the vision
+          </p>
           
           <motion.div
             initial={{ opacity: 0, y: 20 }}

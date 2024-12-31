@@ -90,9 +90,12 @@ const Ministry = () => {
           transition={{ duration: 0.8 }}
           className="max-w-6xl mx-auto"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 font-playfair">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 font-playfair">
             Our Ministry
           </h1>
+          <p className="text-xl text-center text-muted-foreground mb-12">
+            All that God has given us and all we have acquired to accomplish the vision and goal
+          </p>
           
           <motion.div
             initial={{ opacity: 0, y: 20 }}
