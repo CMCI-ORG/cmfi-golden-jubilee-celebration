@@ -83,6 +83,31 @@ const Timeline = () => {
           description: "Unified scattered groups under elder leadership, formalizing the church structure. Began systematic missionary sending after years of preparation."
         }
       ]
+    },
+    {
+      era: "Global Impact and Legacy (1994-2009)",
+      events: [
+        {
+          year: "1994-2000",
+          title: "Missionary Expansion",
+          description: "Led systematic missionary sending across Africa. Established mission bases in multiple nations while maintaining focus on discipleship and spiritual depth."
+        },
+        {
+          year: "2000-2005",
+          title: "Literature Ministry Growth",
+          description: "Intensified writing ministry, producing numerous books and materials. Publications were translated into multiple languages and distributed globally, impacting millions of readers."
+        },
+        {
+          year: "2005-2009",
+          title: "Final Years of Ministry",
+          description: "Focused on training next-generation leaders, establishing Bible schools, and strengthening the foundation of the ministry. Continued writing and teaching until his passing in March 2009."
+        },
+        {
+          year: "2009",
+          title: "Transition to Glory",
+          description: "On March 14, 2009, Professor Fomum went to be with the Lord, leaving behind a legacy of over 150 books, countless disciples, and a global ministry impacting nations for Christ."
+        }
+      ]
     }
   ];
 
