@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Menu, Home, Info, Clock, MessageSquare, Music, Mail, ChevronDown } from "lucide-react";
+import { Menu, Home, Info, Clock, MessageSquare, Music, Mail, Target, Flag, Award, Users, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -22,23 +22,28 @@ const Navigation = () => {
   const aboutMenuItems = [
     {
       title: "Vision",
-      path: "/vision"
+      path: "/vision",
+      icon: <Target className="w-4 h-4 mr-2" />
     },
     {
       title: "Goal",
-      path: "/goal"
+      path: "/goal",
+      icon: <Flag className="w-4 h-4 mr-2" />
     },
     {
       title: "Ministry",
-      path: "/ministry"
+      path: "/ministry",
+      icon: <Users className="w-4 h-4 mr-2" />
     },
     {
       title: "Work",
-      path: "/work"
+      path: "/work",
+      icon: <BookOpen className="w-4 h-4 mr-2" />
     },
     {
       title: "Mission",
-      path: "/mission"
+      path: "/mission",
+      icon: <Award className="w-4 h-4 mr-2" />
     }
   ];
 
@@ -63,6 +68,7 @@ const Navigation = () => {
               to="/about"
               className="flex items-center space-x-2 select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
             >
+              <Info className="w-4 h-4" />
               <div className="text-sm font-medium leading-none">About Us</div>
             </Link>
             {aboutMenuItems.map((item) => (
@@ -71,6 +77,7 @@ const Navigation = () => {
                 to={item.path}
                 className="flex items-center space-x-2 select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
               >
+                {item.icon}
                 <div className="text-sm font-medium leading-none">{item.title}</div>
               </Link>
             ))}
