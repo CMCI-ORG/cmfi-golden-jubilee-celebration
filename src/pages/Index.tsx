@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import CountdownTimer from "@/components/CountdownTimer";
-import StatCard from "@/components/StatCard";
 import TestimonialCard from "@/components/TestimonialCard";
+import StatisticsSection from "@/components/StatisticsSection";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
@@ -111,19 +111,7 @@ const Index = () => {
       </section>
 
       {/* Statistics Section */}
-      <section className="py-12 md:py-20 bg-gradient-to-b from-white to-gray-50">
-        <div className="w-full px-4 md:container mx-auto">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 md:mb-16 font-playfair px-2">
-            50 Years of God's Faithfulness
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 px-2">
-            <StatCard number="6M+" label="Believers Worldwide" delay={0.2} />
-            <StatCard number="150+" label="Nations Reached" delay={0.4} />
-            <StatCard number="331+" label="International Missionaries" delay={0.6} />
-            <StatCard number="1300+" label="National Missionaries" delay={0.8} />
-          </div>
-        </div>
-      </section>
+      <StatisticsSection />
 
       {/* Full Length Banner Section */}
       <section className="w-full py-12 md:py-20">

@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
+import React from "react";
 
 interface StatCardProps {
   number: string;
   label: string;
   delay?: number;
+  icon?: React.ReactNode;
 }
 
-const StatCard = ({ number, label, delay = 0 }: StatCardProps) => {
+const StatCard = ({ number, label, delay = 0, icon }: StatCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -15,8 +17,9 @@ const StatCard = ({ number, label, delay = 0 }: StatCardProps) => {
       viewport={{ once: true }}
       className="stat-card"
     >
-      <h3 className="text-4xl md:text-5xl font-bold text-primary mb-2">{number}</h3>
-      <p className="text-gray-600 text-lg">{label}</p>
+      {icon}
+      <h3 className="text-3xl md:text-4xl font-bold mb-2 text-primary">{number}</h3>
+      <p className="text-gray-600">{label}</p>
     </motion.div>
   );
 };
