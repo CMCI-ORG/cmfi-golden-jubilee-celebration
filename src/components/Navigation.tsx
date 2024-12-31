@@ -8,6 +8,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   NavigationMenuContent,
+  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import {
   Sheet,
