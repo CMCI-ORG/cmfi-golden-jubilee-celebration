@@ -22,28 +22,23 @@ const Navigation = () => {
   const aboutMenuItems = [
     {
       title: "Vision",
-      path: "/vision",
-      description: "The totality of what God has revealed to us as His will"
+      path: "/vision"
     },
     {
       title: "Goal",
-      path: "/goal",
-      description: "A measurable concretization of the vision"
+      path: "/goal"
     },
     {
       title: "Ministry",
-      path: "/ministry",
-      description: "All that God has given us to accomplish the vision"
+      path: "/ministry"
     },
     {
       title: "Work",
-      path: "/work",
-      description: "What we must do in individuals, localities, and nations"
+      path: "/work"
     },
     {
       title: "Mission",
-      path: "/mission",
-      description: "The recurrent tasks needed to accomplish the vision"
+      path: "/mission"
     }
   ];
 
@@ -67,9 +62,6 @@ const Navigation = () => {
               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
             >
               <div className="text-sm font-medium leading-none">About Us</div>
-              <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                Learn more about our organization
-              </p>
             </Link>
             {aboutMenuItems.map((item) => (
               <Link
@@ -78,9 +70,6 @@ const Navigation = () => {
                 className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
               >
                 <div className="text-sm font-medium leading-none">{item.title}</div>
-                <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                  {item.description}
-                </p>
               </Link>
             ))}
           </div>
