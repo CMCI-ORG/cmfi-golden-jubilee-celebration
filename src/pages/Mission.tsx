@@ -1,21 +1,83 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import PageBanner from "@/components/PageBanner";
+import {
+  Users,
+  Church,
+  GraduationCap,
+  PrayingHands,
+  Timer,
+  Globe2,
+  Flame,
+  Sparkles,
+  Music2,
+  Plane,
+  BookOpen,
+  TreePine
+} from "lucide-react";
 
 const Mission = () => {
   const movements = [
-    { title: "Soul-Winning", description: "Evangelizing persistently and universally" },
-    { title: "Church Planting", description: "Establishing local and house churches globally" },
-    { title: "Disciple-Making", description: "Training individuals to obey Christ in all things" },
-    { title: "Prayer", description: "Interceding for every aspect of the ministry and mission" },
-    { title: "Fasting", description: "Waging spiritual battles and seeking God's favor" },
-    { title: "Fasting Intercession", description: "Praying for cities, nations, and generations" },
-    { title: "Revival and Holiness", description: "Deepening spiritual life and encouraging personal consecration" },
-    { title: "Signs and Wonders", description: "Authenticating the Gospel through divine power" },
-    { title: "Worship", description: "Exalting God for His works and purposes" },
-    { title: "Missionary Work", description: "Advancing the Gospel locally and internationally" },
-    { title: "Literature", description: "Creating and distributing materials that teach and inspire" },
-    { title: "Church Growth", description: "Nurturing mega-churches and supra-churches for greater reach" }
+    { 
+      title: "Soul-Winning", 
+      description: "Evangelizing persistently and universally",
+      icon: Users
+    },
+    { 
+      title: "Church Planting", 
+      description: "Establishing local and house churches globally",
+      icon: Church
+    },
+    { 
+      title: "Disciple-Making", 
+      description: "Training individuals to obey Christ in all things",
+      icon: GraduationCap
+    },
+    { 
+      title: "Prayer", 
+      description: "Interceding for every aspect of the ministry and mission",
+      icon: PrayingHands
+    },
+    { 
+      title: "Fasting", 
+      description: "Waging spiritual battles and seeking God's favor",
+      icon: Timer
+    },
+    { 
+      title: "Fasting Intercession", 
+      description: "Praying for cities, nations, and generations",
+      icon: Globe2
+    },
+    { 
+      title: "Revival and Holiness", 
+      description: "Deepening spiritual life and encouraging personal consecration",
+      icon: Flame
+    },
+    { 
+      title: "Signs and Wonders", 
+      description: "Authenticating the Gospel through divine power",
+      icon: Sparkles
+    },
+    { 
+      title: "Worship", 
+      description: "Exalting God for His works and purposes",
+      icon: Music2
+    },
+    { 
+      title: "Missionary Work", 
+      description: "Advancing the Gospel locally and internationally",
+      icon: Plane
+    },
+    { 
+      title: "Literature", 
+      description: "Creating and distributing materials that teach and inspire",
+      icon: BookOpen
+    },
+    { 
+      title: "Church Growth", 
+      description: "Nurturing mega-churches and supra-churches for greater reach",
+      icon: TreePine
+    }
   ];
 
   return (
@@ -64,12 +126,15 @@ const Mission = () => {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.1 }}
-                      className="bg-white p-4 rounded-lg shadow-sm border hover:shadow-md transition-shadow"
+                      className="bg-white p-6 rounded-lg shadow-sm border hover:shadow-md transition-shadow"
                     >
-                      <h3 className="text-lg font-semibold mb-2 text-primary">
-                        {movement.title}
-                      </h3>
-                      <p className="text-sm text-gray-600">{movement.description}</p>
+                      <div className="flex flex-col items-center text-center">
+                        <movement.icon className="w-12 h-12 mb-4 text-primary" strokeWidth={1.5} />
+                        <h3 className="text-lg font-semibold mb-2 text-primary">
+                          {movement.title}
+                        </h3>
+                        <p className="text-sm text-gray-600">{movement.description}</p>
+                      </div>
                     </motion.div>
                   ))}
                 </div>
