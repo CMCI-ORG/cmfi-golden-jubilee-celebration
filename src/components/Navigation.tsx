@@ -35,7 +35,7 @@ const Navigation = () => {
               <NavigationMenuItem>
                 <Link to="/timeline">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    ZTF Timeline
+                    Timeline
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
