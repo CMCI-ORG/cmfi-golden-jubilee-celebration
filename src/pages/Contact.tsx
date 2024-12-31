@@ -32,7 +32,7 @@ const Contact = () => {
               <Mail className="w-6 h-6 text-primary mt-1" />
               <div>
                 <h3 className="font-semibold mb-1">Email</h3>
-                <p className="text-muted-foreground">info@cmfi-golden.org</p>
+                <p className="text-muted-foreground">ztfoffice@gmail.com</p>
               </div>
             </div>
             
@@ -40,7 +40,7 @@ const Contact = () => {
               <Phone className="w-6 h-6 text-primary mt-1" />
               <div>
                 <h3 className="font-semibold mb-1">Phone</h3>
-                <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                <p className="text-muted-foreground">(237) 677 50 29 42</p>
               </div>
             </div>
             
@@ -49,8 +49,9 @@ const Contact = () => {
               <div>
                 <h3 className="font-semibold mb-1">Address</h3>
                 <p className="text-muted-foreground">
-                  123 Faith Street<br />
-                  Spiritual City, SP 12345
+                  International Headquarters<br />
+                  P.O. Box 385<br />
+                  Bertoua, Cameroon
                 </p>
               </div>
             </div>
