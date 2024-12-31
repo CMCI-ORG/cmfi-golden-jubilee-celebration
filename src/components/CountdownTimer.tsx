@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { formatInTimeZone } from 'date-fns-tz';
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -10,9 +11,11 @@ const CountdownTimer = () => {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      const jubileeDate = new Date('2025-01-01').getTime();
-      const now = new Date().getTime();
-      const difference = jubileeDate - now;
+      const now = new Date();
+      const parisTime = formatInTimeZone(now, 'Europe/Paris', 'yyyy-MM-dd HH:mm:ss');
+      const jubileeDate = new Date('2025-01-01T00:00:00+01:00').getTime();
+      const currentTime = new Date(parisTime).getTime();
+      const difference = jubileeDate - currentTime;
 
       if (difference > 0) {
         setTimeLeft({
@@ -29,22 +32,24 @@ const CountdownTimer = () => {
   }, []);
 
   return (
-    <div className="flex gap-4 md:gap-8 text-white">
-      <div className="text-center">
-        <div className="text-4xl md:text-6xl font-bold">{timeLeft.days}</div>
-        <div className="text-sm md:text-base">Days</div>
-      </div>
-      <div className="text-center">
-        <div className="text-4xl md:text-6xl font-bold">{timeLeft.hours}</div>
-        <div className="text-sm md:text-base">Hours</div>
-      </div>
-      <div className="text-center">
-        <div className="text-4xl md:text-6xl font-bold">{timeLeft.minutes}</div>
-        <div className="text-sm md:text-base">Minutes</div>
-      </div>
-      <div className="text-center">
-        <div className="text-4xl md:text-6xl font-bold">{timeLeft.seconds}</div>
-        <div className="text-sm md:text-base">Seconds</div>
+    <div className="flex justify-center items-center w-full">
+      <div className="flex gap-4 md:gap-8 text-white">
+        <div className="text-center">
+          <div className="text-4xl md:text-6xl font-bold">{timeLeft.days}</div>
+          <div className="text-sm md:text-base">Days</div>
+        </div>
+        <div className="text-center">
+          <div className="text-4xl md:text-6xl font-bold">{timeLeft.hours}</div>
+          <div className="text-sm md:text-base">Hours</div>
+        </div>
+        <div className="text-center">
+          <div className="text-4xl md:text-6xl font-bold">{timeLeft.minutes}</div>
+          <div className="text-sm md:text-base">Minutes</div>
+        </div>
+        <div className="text-center">
+          <div className="text-4xl md:text-6xl font-bold">{timeLeft.seconds}</div>
+          <div className="text-sm md:text-base">Seconds</div>
+        </div>
       </div>
     </div>
   );
