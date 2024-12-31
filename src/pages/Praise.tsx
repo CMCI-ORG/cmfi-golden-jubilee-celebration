@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { PageBanner } from "@/components/PageBanner";
+import PageBanner from "@/components/PageBanner";
 
 const PraiseContent = [
   {
@@ -18,10 +18,7 @@ const PraiseContent = [
 const Praise = () => {
   return (
     <div className="min-h-screen bg-background">
-      <PageBanner 
-        title="Praise Reports" 
-        subtitle="Let us praise and thank the Lord as follows"
-      />
+      <PageBanner />
       
       <div className="container mx-auto py-12 px-4">
         {PraiseContent.map((item, index) => (
