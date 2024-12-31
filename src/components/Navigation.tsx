@@ -16,7 +16,7 @@ const Navigation = () => {
       <div className="container flex h-14 items-center justify-between">
         <Link to="/" className="flex items-center">
           <img 
-            src="/lovable-uploads/f5f37d36-e46f-4c93-ba81-cde48f170424.png" 
+            src="/lovable-uploads/799235f2-59ff-49e5-b108-fc3f92c39503.png" 
             alt="CMFI Golden Jubilee Logo" 
             className="h-8 w-auto"
           />
@@ -36,6 +36,13 @@ const Navigation = () => {
                 <Link to="/timeline">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     ZTF Timeline
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link to="/praise">
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Praise
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>

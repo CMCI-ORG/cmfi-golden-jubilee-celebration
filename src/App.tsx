@@ -10,6 +10,7 @@ import Goal from "./pages/Goal";
 import Ministry from "./pages/Ministry";
 import Work from "./pages/Work";
 import Mission from "./pages/Mission";
+import Praise from "./pages/Praise";
 import Navigation from "./components/Navigation";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/ministry" element={<Ministry />} />
           <Route path="/work" element={<Work />} />
           <Route path="/mission" element={<Mission />} />
+          <Route path="/praise" element={<Praise />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
