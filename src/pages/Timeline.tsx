@@ -5,117 +5,82 @@ import PageBanner from "@/components/PageBanner";
 const Timeline = () => {
   const timelineData = [
     {
-      era: "The Early Years (1945–1956)",
+      era: "The Making of the Man (1945-1974)",
       events: [
         {
           year: "1945",
           title: "Birth",
-          description: "Born on 20th June 1945 in Wumnembug Meta, Northwest Province of Cameroon, to Pa Solomon Fomum Tanee and Mama Rebecca Angum."
+          description: "Born on 20th June 1945 in Wumnembug Meta, Northwest Province of Cameroon, to Pa Solomon Fomum Tanee and Mama Rebecca Angum, who laid a godly foundation for his life."
         },
         {
           year: "1956",
           title: "Salvation",
-          description: "Received the Lord Jesus Christ after reading a tract entitled \"Someone died for you\" given by his father."
-        }
-      ]
-    },
-    {
-      era: "Born Again, but with Mixed Ambitions (1957–1966)",
-      events: [
+          description: "Convicted of sin through his father's sermon 'You Must Be Born Again'. Read the tract 'Someone Died for You', received Christ, and immediately shared his faith with his best friend, Ruben, in a neighboring village."
+        },
         {
-          year: "1960",
-          title: "Early Education",
-          description: "Began studies at Cameroon Protestant College, Bali, and participated in evangelism on Sundays."
+          year: "1960-1965",
+          title: "Secondary School Years",
+          description: "Read the Bible from Genesis to Revelation before age 11. Evangelized regularly, preaching in and outside his school despite challenges, demonstrating a hunger for God's Word and developing a burden for souls."
         },
         {
           year: "1966",
-          title: "Consecration",
-          description: "1st October 1966: Made a total surrender to the Lord and His service, marking a significant spiritual turning point."
+          title: "University Beginning",
+          description: "Started university in Sierra Leone on September 27th, 1966. Encountered Christ as the model for life, leading to radical repentance and absolute surrender. Became president of the Christian Union, influenced by Hans Burky, Joyce Chaplin, and Dr. Mike Oye."
+        },
+        {
+          year: "1973",
+          title: "Pentecost in Uganda",
+          description: "Filled with the Holy Spirit, developed a distinct teaching ministry, and gained national recognition. Experienced a divine revelation about intercession, won over 500 souls, and received missionary commissioning from Bishop Festo Kivengere."
         }
       ]
     },
     {
-      era: "Consecration and Ministry (1967–1976)",
+      era: "Return and National Impact (1975-1977)",
       events: [
-        {
-          year: "1972",
-          title: "Marriage and First Book",
-          description: "Married Prisca Zei Fokam on 26th February 1972 in Kampala, Uganda. Published his first book: \"Discipleship at Any Cost.\""
-        },
         {
           year: "1975",
           title: "Return to Cameroon",
-          description: "Returned to Cameroon as a missionary on 11th May 1975. Preached to his first convert the next day. Held his first prayer night and wrote his first tract, \"How to Know Jesus.\""
+          description: "Returned as a missionary with a prophetic word. Wrote 'How to Know Jesus' tract on his second day back. Preached 'You Must Be Born Again' at Presbyterian Church Djoungolo, leading to widespread conviction."
+        },
+        {
+          year: "1976",
+          title: "National Recognition",
+          description: "Preached across all major denominations. Led the famous 'Evangelical Hurricane Storms Bamenda' crusade, earning the title 'Cameroon's Billy Graham'. Learned crucial lessons about denominational work through the Ngaoundéré experience."
         }
       ]
     },
     {
-      era: "National Missionary in Cameroon (1977–1986)",
+      era: "Church Planting and Growth (1978-1986)",
       events: [
         {
-          year: "1979",
-          title: "Church Planting",
-          description: "The first house church was planted on 18th February 1979 in Sister Emilia Tendo's house in Obili, Yaoundé. Initiated fasting intercessions for Cameroon."
+          year: "1978",
+          title: "New Direction",
+          description: "Excommunicated by the Presbyterian Church, launched house churches emphasizing one-on-one evangelism and personal discipleship. Every member became active in gospel preaching."
         },
         {
-          year: "1982",
-          title: "Discipleship",
-          description: "The Lord instructed him to focus on making disciples and expand his vision globally."
+          year: "1978-1986",
+          title: "Extensive Church Planting",
+          description: "Led systematic church planting across Cameroon through trained evangelism teams, nightly prayer meetings, and holiday outreach programs. Developed the 'Way Series' teachings and trained national missionaries."
+        },
+        {
+          year: "1986",
+          title: "Ministry Independence",
+          description: "Faced excommunication from Pentecostal denomination due to government pressure. Chose to pursue the gospel freely without denominational constraints."
         }
       ]
     },
     {
-      era: "The Emergence of an International Leader (1987–1996)",
+      era: "Discipleship and Formalization (1986-1994)",
       events: [
         {
-          year: "1987",
-          title: "Long Fasting",
-          description: "Carried out his first 40-day fast from 13th July to 21st August 1987."
+          year: "1986-1994",
+          title: "Intensive Discipleship",
+          description: "Selected 15 men and 22 women for intentional discipleship. Established weekly home meetings, accountability practices, and fasting disciplines. Distributed over 1 million books to Nigeria and thousands to India."
         },
         {
-          year: "1990",
-          title: "Prayer Crusade",
-          description: "Held a 51-day prayer crusade focusing on the direction of money in the ministry."
-        },
-        {
-          year: "1991",
-          title: "CMFI Official Name",
-          description: "The work was officially named Christian Missionary Fellowship International (CMFI)."
-        }
-      ]
-    },
-    {
-      era: "A Distinct Ministry (1997–2006)",
-      events: [
-        {
-          year: "1997",
-          title: "Global Prophecy",
-          description: "Received the Colorado Springs Prophecy regarding the ministry's global impact."
-        },
-        {
-          year: "1999",
-          title: "Year of Jubilee",
-          description: "Declared 1999 a year of Jubilee for the ministry. The number of believers in CMFI reached 35,000 across 37 countries."
-        },
-        {
-          year: "2005",
-          title: "DSc Award",
-          description: "Received the Doctor of Science (DSc) from the University of Durham, Britain."
-        }
-      ]
-    },
-    {
-      era: "Launching Phase Two of the Work (2007–2009)",
-      events: [
-        {
-          year: "2007",
-          title: "Supra-long Fast",
-          description: "Carried out a 56-day supra-long fast for ministry direction."
-        },
-        {
-          year: "2009",
-          title: "Homegoing",
-          description: "Went home to be with the Lord on 14th March 2009, completing a remarkable life of service."
+          year: "1994",
+          title: "Church Structure",
+          description: "Unified scattered groups under elder leadership, formalizing the church structure. Began systematic missionary sending after years of preparation."
         }
       ]
     }
@@ -132,7 +97,7 @@ const Timeline = () => {
           className="container mx-auto max-w-4xl"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 font-playfair">
-            ZTF Timeline
+            The Chronicles of ZTF
           </h1>
           
           <div className="space-y-12">
