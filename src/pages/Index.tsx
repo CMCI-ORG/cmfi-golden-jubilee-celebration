@@ -46,9 +46,9 @@ const Index = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <StatCard number="6M+" label="Believers Worldwide" delay={0.2} />
-            <StatCard number="113" label="Nations Reached" delay={0.4} />
-            <StatCard number="800+" label="Literature Titles" delay={0.6} />
-            <StatCard number="200+" label="Missionaries Sent" delay={0.8} />
+            <StatCard number="150+" label="Nations Reached" delay={0.4} />
+            <StatCard number="331+" label="International Missionaries" delay={0.6} />
+            <StatCard number="1300+" label="National Missionaries" delay={0.8} />
           </div>
         </div>
       </section>
