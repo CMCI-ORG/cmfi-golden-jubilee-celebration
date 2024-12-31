@@ -5,7 +5,7 @@ import {
   Users,
   Church,
   GraduationCap,
-  Hands,
+  Hand,
   Timer,
   Globe2,
   Flame,
@@ -36,7 +36,7 @@ const Mission = () => {
     { 
       title: "Prayer", 
       description: "Interceding for every aspect of the ministry and mission",
-      icon: Hands
+      icon: Hand
     },
     { 
       title: "Fasting", 
