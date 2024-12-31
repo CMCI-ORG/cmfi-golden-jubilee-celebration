@@ -48,17 +48,29 @@ const Goal = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-4">
-                  <li className="bg-primary/5 p-4 rounded-lg">
-                    To labor to bring 1 billion disciples to render total obedience to Christ by 2065
-                  </li>
-                  <li className="bg-primary/5 p-4 rounded-lg">
-                    Establish 25 million house churches as organic family units of discipleship
-                  </li>
-                  <li className="bg-primary/5 p-4 rounded-lg">
-                    Contribute to hastening the coming of Christ through a critical mass of obedient disciples
-                  </li>
-                </ul>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="relative bg-primary/5 p-6 rounded-lg text-center">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">
+                      1
+                    </div>
+                    <p className="mt-4 font-semibold">1 Billion Disciples</p>
+                    <p className="text-sm text-gray-600 mt-2">by 2065</p>
+                  </div>
+                  <div className="relative bg-primary/5 p-6 rounded-lg text-center">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">
+                      2
+                    </div>
+                    <p className="mt-4 font-semibold">25 Million House Churches</p>
+                    <p className="text-sm text-gray-600 mt-2">organic discipleship units</p>
+                  </div>
+                  <div className="relative bg-primary/5 p-6 rounded-lg text-center">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">
+                      3
+                    </div>
+                    <p className="mt-4 font-semibold">Hasten Christ's Coming</p>
+                    <p className="text-sm text-gray-600 mt-2">through obedient disciples</p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
