@@ -168,9 +168,13 @@ const Index = () => {
             </motion.div>
           </div>
           <div className="text-center mt-8">
-            <button className="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-primary/90 transition-colors">
+            <Link 
+              to="/timeline" 
+              className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary/90 transition-all hover:gap-4 group"
+            >
               Explore Full Timeline
-            </button>
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </Link>
           </div>
         </div>
       </section>
