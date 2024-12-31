@@ -13,6 +13,9 @@ const PageBanner = () => {
           src="/lovable-uploads/f8eceeae-8da7-40ab-a857-660c9ee2afc0.png"
           alt="CMFI Golden Jubilee Banner"
           className="w-full h-auto object-cover"
+          loading="lazy"
+          width="1920"
+          height="400"
         />
       </motion.div>
     </section>
