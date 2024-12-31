@@ -16,9 +16,9 @@ const Navigation = () => {
       <div className="container flex h-14 items-center justify-between">
         <Link to="/" className="flex items-center">
           <img 
-            src="/lovable-uploads/45a7fd89-8c1d-4899-b50a-ddf08fa910fb.png" 
+            src="/lovable-uploads/f5f37d36-e46f-4c93-ba81-cde48f170424.png" 
             alt="CMFI Golden Jubilee Logo" 
-            className="h-10 w-auto"
+            className="h-8 w-auto"
           />
         </Link>
         <div className="flex items-center space-x-4">
