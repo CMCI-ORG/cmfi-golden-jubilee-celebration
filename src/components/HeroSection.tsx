@@ -3,8 +3,23 @@ import { motion } from "framer-motion";
 const HeroSection = () => {
   return (
     <section className="relative h-screen flex items-center justify-center">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81')] bg-cover bg-center" />
-      <div className="absolute inset-0 hero-gradient" />
+      <div 
+        className="absolute inset-0" 
+        style={{
+          background: `linear-gradient(45deg, #1A1F2C, #221F26)`,
+          backgroundSize: '100% 100%',
+          backgroundPosition: 'center',
+          opacity: 0.95
+        }}
+      />
+      <div 
+        className="absolute inset-0"
+        style={{
+          backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 50px, rgba(255, 215, 0, 0.1) 50px, rgba(255, 215, 0, 0.1) 100px)`,
+          backgroundSize: '141.42px 141.42px',
+          backgroundPosition: 'center'
+        }}
+      />
       <div className="relative z-10 w-full px-4 md:container mx-auto text-center text-white">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
