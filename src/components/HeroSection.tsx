@@ -6,17 +6,19 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0" 
         style={{
-          background: `linear-gradient(45deg, #1A1F2C, #221F26)`,
+          background: `linear-gradient(to right, #0A192F, #112240)`,
           backgroundSize: '100% 100%',
-          backgroundPosition: 'center',
-          opacity: 0.95
+          backgroundPosition: 'center'
         }}
       />
       <div 
         className="absolute inset-0"
         style={{
-          backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 50px, rgba(255, 215, 0, 0.1) 50px, rgba(255, 215, 0, 0.1) 100px)`,
-          backgroundSize: '141.42px 141.42px',
+          backgroundImage: `
+            linear-gradient(135deg, transparent 0%, transparent 49%, rgba(255, 215, 0, 0.05) 50%, transparent 51%, transparent 100%),
+            linear-gradient(45deg, transparent 0%, transparent 49%, rgba(255, 215, 0, 0.05) 50%, transparent 51%, transparent 100%)
+          `,
+          backgroundSize: '30px 30px',
           backgroundPosition: 'center'
         }}
       />
