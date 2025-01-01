@@ -15,15 +15,6 @@ const HeroSection = () => {
         >
           CMFI Golden Jubilee
         </motion.h1>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-lg sm:text-xl md:text-2xl mb-8 md:mb-12 max-w-3xl mx-auto px-4 text-white/90"
-        >
-          "Praise the Lord! Praise Him for His acts of power; praise Him for His surpassing greatness"
-          <span className="block mt-2 text-base md:text-lg text-white/80">- Psalm 150:2</span>
-        </motion.p>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

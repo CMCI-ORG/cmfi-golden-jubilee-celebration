@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import TestimonialCard from "@/components/TestimonialCard";
 import StatisticsSection from "@/components/StatisticsSection";
 import HeroSection from "@/components/HeroSection";
+import BibleVerseSection from "@/components/BibleVerseSection";
 import IntroductionSection from "@/components/IntroductionSection";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -10,6 +11,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <HeroSection />
+      <BibleVerseSection />
       <IntroductionSection />
       <StatisticsSection />
 
