@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Target, Flag, Users, BookOpen, Award } from "lucide-react";
 import { SheetClose } from "@/components/ui/sheet";
+import { cn } from "@/lib/utils";
 
 export const aboutMenuItems = [
   {
@@ -32,14 +33,19 @@ export const aboutMenuItems = [
 
 interface AboutMenuItemsProps {
   isMobile?: boolean;
+  currentPath?: string;
 }
 
-export const AboutMenuItems = ({ isMobile = false }: AboutMenuItemsProps) => {
+export const AboutMenuItems = ({ isMobile = false, currentPath = "" }: AboutMenuItemsProps) => {
   const MenuItem = ({ item }: { item: typeof aboutMenuItems[0] }) => {
+    const isActive = currentPath === item.path;
     const content = (
       <Link
         to={item.path}
-        className="flex items-center space-x-2 select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+        className={cn(
+          "flex items-center space-x-2 select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+          isActive && "bg-accent text-accent-foreground"
+        )}
       >
         {item.icon}
         <div className="text-sm font-medium leading-none">{item.title}</div>
