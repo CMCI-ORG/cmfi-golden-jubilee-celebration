@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-import CountdownTimer from "./CountdownTimer";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center">
+    <section className="relative h-screen flex items-start pt-32">
       <div className="absolute inset-0 bg-[url('/lovable-uploads/97ec4257-b638-4373-98f1-7df27d8060bc.png')] bg-cover bg-center bg-[#002B4C]" />
       <div className="absolute inset-0 hero-gradient" />
       <div className="relative z-10 w-full px-4 md:container mx-auto text-center text-white">
@@ -15,14 +14,6 @@ const HeroSection = () => {
         >
           CMFI Golden Jubilee
         </motion.h1>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="w-full px-2"
-        >
-          <CountdownTimer />
-        </motion.div>
       </div>
     </section>
   );
