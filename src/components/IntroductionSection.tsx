@@ -21,7 +21,7 @@ const IntroductionSection = () => {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 font-playfair bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
-                CELEBRATION OF CMFI GOLDEN JUBILEE
+                CMFI GOLDEN JUBILEE
               </h2>
             </motion.div>
             <div className="w-24 h-1 bg-primary mx-auto mb-8 rounded-full" />
