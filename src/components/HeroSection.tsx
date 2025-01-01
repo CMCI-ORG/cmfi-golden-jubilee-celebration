@@ -4,7 +4,7 @@ import CountdownTimer from "./CountdownTimer";
 const HeroSection = () => {
   return (
     <section className="relative h-screen flex items-center justify-center">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81')] bg-cover bg-center" />
+      <div className="absolute inset-0 bg-[url('/lovable-uploads/97ec4257-b638-4373-98f1-7df27d8060bc.png')] bg-cover bg-center bg-[#002B4C]" />
       <div className="absolute inset-0 hero-gradient" />
       <div className="relative z-10 w-full px-4 md:container mx-auto text-center text-white">
         <motion.h1
