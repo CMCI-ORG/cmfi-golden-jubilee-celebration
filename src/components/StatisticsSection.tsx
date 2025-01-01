@@ -9,7 +9,7 @@ const StatisticsSection = () => {
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 md:mb-16 font-playfair px-2">
           50 Years of God's Faithfulness
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 px-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 px-2 place-items-center justify-items-center max-w-7xl mx-auto">
           <StatCard 
             number="6M+" 
             label="Believers Worldwide" 
