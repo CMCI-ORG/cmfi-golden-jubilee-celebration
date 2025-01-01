@@ -25,7 +25,7 @@ const Index = () => {
             className="relative w-full max-w-7xl mx-auto px-4"
           >
             <img
-              src="/lovable-uploads/d4136a8e-34fc-4112-ab92-a827833262e6.png"
+              src="/lovable-uploads/e3360e05-0c8d-4e8b-a28c-64a8ca29e0a6.png"
               alt="CMFI Golden Jubilee Banner"
               className="w-full h-auto object-cover rounded-lg shadow-lg"
             />
