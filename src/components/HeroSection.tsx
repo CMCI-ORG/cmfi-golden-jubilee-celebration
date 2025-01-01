@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import CountdownTimer from "./CountdownTimer";
 
 const HeroSection = () => {
   return (
@@ -24,14 +23,6 @@ const HeroSection = () => {
           "Praise the Lord! Praise Him for His acts of power; praise Him for His surpassing greatness"
           <span className="block mt-2 text-base md:text-lg text-white/80">- Psalm 150:2</span>
         </motion.p>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="w-full px-2"
-        >
-          <CountdownTimer />
-        </motion.div>
       </div>
     </section>
   );
